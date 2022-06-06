@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>{{label}}</mat-label>
+    <input matInput [placeholder]="placeholder" [satDatepicker]="picker" [min]="minDate" [max]="maxDate"
+        [formControl]="control" [fedMask]="maskConfig" (blur)="blur($event)" (dateChange)="change($event)"
+        (dateInput)="dateInput($event)">
+    <sat-datepicker #picker [rangeMode]="rangeMode"></sat-datepicker>
+    <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+</mat-form-field>
